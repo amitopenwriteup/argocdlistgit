@@ -10,16 +10,14 @@ spec:
       - name: apache
         namespace: apache
         repoPath: apache
-        port: 80
       - name: nginx
         namespace: nginx
         repoPath: nginx
-        port: 80
   template:
     metadata:
       name: '{{name}}'
     spec:
-      project: default
+      project: myproj
       source:
         repoURL: https://github.com/amitopenwriteup/argocdlistgit.git
         targetRevision: HEAD
