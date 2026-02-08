@@ -17,7 +17,7 @@ spec:
     metadata:
       name: '{{name}}'
     spec:
-      project: myproj
+      project: default
       source:
         repoURL: https://github.com/amitopenwriteup/argocdlistgit.git
         targetRevision: HEAD
@@ -29,5 +29,7 @@ spec:
         automated:
           prune: true
           selfHeal: true
+        syncOptions:
+        - CreateNamespace=true
         syncOptions:
         - CreateNamespace=true
